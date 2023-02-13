@@ -4,8 +4,9 @@ export const ProductContainer = tw.section`
     relative
     lg:container
     mx-auto
-    md:px-40
+    lg:px-40
     xl:px-80
+    2xl:px-[30rem]
     lg:mt-8
     lg:flex
     lg:gap-24
