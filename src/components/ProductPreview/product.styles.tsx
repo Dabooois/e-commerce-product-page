@@ -23,7 +23,8 @@ export const Previous = tw.img`
     top-[50%]
     ml-6
     py-4
-    px-5 
+    px-5
+    lg:ml-[-2rem]
     bg-white
     rounded-[50%]
     cursor-pointer
@@ -32,6 +33,7 @@ export const Previous = tw.img`
 export const Next = tw(Previous)`
     right-0
     mr-6
+    lg:mr-[-2rem]
     
 `;
 

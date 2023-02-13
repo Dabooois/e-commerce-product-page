@@ -12,6 +12,7 @@ module.exports = {
         white: 'hsl(0, 0%, 100%)',
         black: 'hsl(0, 0%, 0%)',
         paragraph: 'rgba(69, 69, 69, 0.75)',
+        blackTransparent: 'rgba(0, 0, 0, 0.7)',
       },
       fontSize: {
         title: '3rem',

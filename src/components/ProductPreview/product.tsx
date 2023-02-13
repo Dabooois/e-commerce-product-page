@@ -15,9 +15,11 @@ import IconNext from '../../assets/images/icon-next.svg';
 import IconPrev from '../../assets/images/icon-previous.svg';
 import IconPlus from '../../assets/images/icon-plus.svg';
 import IconMinus from '../../assets/images/icon-minus.svg';
+import ModalProduct from './ModalProduct';
 
 const Product = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [showModal, setShowModal] = useState(false);
   const handleChange = (key: number, action: string) => {
     if (action === 'previous' && key !== 0) setActiveIndex((prev) => prev - 1);
     if (action === 'next') {
@@ -31,6 +33,11 @@ const Product = () => {
       setActiveIndex(() => key);
     }
   };
+
+  const handleShow = (e: React.MouseEvent<HTMLImageElement>) => {
+    setShowModal((modal) => !modal);
+  };
+
   return (
     <ProductContainer>
       <div>
@@ -46,7 +53,11 @@ const Product = () => {
               onClick={() => handleChange(key, 'previous')}
               className='md:hidden block'
             />
-            <img src={el.image} className='z-[-10] lg:rounded-3xl ' />
+            <img
+              src={el.image}
+              className='z-[-10] lg:rounded-3xl md:cursor-pointer'
+              onClick={(e) => handleShow(e)}
+            />
             <Next
               src={IconNext}
               onClick={() => handleChange(key, 'next')}
@@ -59,6 +70,7 @@ const Product = () => {
           {ProductData.map((el, key) => (
             <img
               src={el.thumbnail}
+              key={key}
               className={`h-28 rounded-lg cursor-pointer hover:outline  hover:outline-offset-2
               hover:outline-orange hover:opacity-[0.6]  ${
                 key === activeIndex
@@ -99,6 +111,10 @@ const Product = () => {
           </ButtonAddtoCart>
         </div>
       </div>
+
+      {showModal && (
+        <ModalProduct setShowModal={setShowModal} showModal={showModal} />
+      )}
     </ProductContainer>
   );
 };

@@ -75,12 +75,16 @@ const Header = () => {
             className='badge  relative cursor-pointer'
             onClick={() => toggleCart()}
           >
-            <i className=' ri-shopping-cart-2-line  text-4xl paragraph z-20'></i>
+            <i className=' ri-shopping-cart-2-line  text-4xl paragraph z-20 shrink-0 '></i>
             <span className='absolute bg-orange text-white px-4 py-1 rounded-full text-md left-[0.8rem] top-[-1rem]'>
               {cart_details.length}
             </span>
           </div>
-          <Image src={Avatar} alt=' User Image' className='h-10' />
+          <Image
+            src={Avatar}
+            alt=' User Image'
+            className='h-10 shrink-0 object-contain'
+          />
         </HeaderContainer>
         <div
           className={`${
