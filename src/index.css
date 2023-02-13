@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fade {
+  animation: fadeIn 1s forwards;
+  backface-visibility: visible;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.paragraph {
+  color: rgba(69, 69, 69, 0.75);
+  font-weight: 500;
+}
+
+.App > .overlay-active {
+  display: block;
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  background-color: #0009;
+  z-index: 10;
+  cursor: pointer;
+}
+.discounted_price {
+  text-decoration: line-through;
+}
