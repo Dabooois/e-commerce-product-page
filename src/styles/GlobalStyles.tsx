@@ -15,7 +15,7 @@ const CustomStyles = createGlobalStyle({
     fontSize: '62.5%',
   },
   '.container': {
-    maxWidth: '100rem',
+    maxWidth: '99.2rem',
     paddingInline: '2rem',
     marginLeft: 'auto',
     marginRight: 'auto',

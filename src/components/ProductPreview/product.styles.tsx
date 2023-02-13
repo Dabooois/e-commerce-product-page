@@ -2,15 +2,16 @@ import tw from 'twin.macro';
 
 export const ProductContainer = tw.section`
     relative
-    lg:container
+    container
     mx-auto
-    lg:px-40
-    xl:px-80
-    2xl:px-[30rem]
-    lg:mt-8
-    lg:flex
+    lg:px-32
+    xl:px-[5rem]
+    2xl:px-[13rem]
+    sm:px-0
+    md:mt-16
+    md:flex
     lg:gap-24
-
+    md:gap-16
 `;
 
 export const ProductSlide = tw.div`

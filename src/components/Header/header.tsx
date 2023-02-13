@@ -44,7 +44,7 @@ const Header = () => {
 
   return (
     <>
-      <HeaderStyle className='container'>
+      <HeaderStyle>
         <HeaderContainer>
           <Image
             src={Menu}
@@ -59,7 +59,7 @@ const Header = () => {
           <ul className='flex gap-8 items-center'>
             {headerLinks.map((el, idx) => (
               <li
-                className={`py-10 text-2xl ${
+                className={`py-10 text-2xl cursor-pointer ${
                   idx === 0 ? 'border-2 border-b-orange' : ''
                 } border-2 border-white text-paragraph capitalize hover:border-2 hover:border-b-orange`}
                 key={idx}

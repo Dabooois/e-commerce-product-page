@@ -44,18 +44,18 @@ const Product = () => {
             <Previous
               src={IconPrev}
               onClick={() => handleChange(key, 'previous')}
-              className='lg:hidden block'
+              className='md:hidden block'
             />
             <img src={el.image} className='z-[-10] lg:rounded-3xl ' />
             <Next
               src={IconNext}
               onClick={() => handleChange(key, 'next')}
-              className='lg:hidden block'
+              className='md:hidden block'
             />
           </ProductSlide>
         ))}
 
-        <div className=' hidden lg:flex flex-row items-center justify-evenly gap-8  mt-16'>
+        <div className=' hidden md:flex flex-row items-center justify-evenly gap-8  mt-16'>
           {ProductData.map((el, key) => (
             <img
               src={el.thumbnail}
@@ -71,7 +71,7 @@ const Product = () => {
         </div>
       </div>
 
-      <div className='container'>
+      <div className='container lg:self-center'>
         <CompanyTitle>Sneaker Company</CompanyTitle>
 
         <ProductTitle>Fall Limited Edition Sneakers</ProductTitle>
@@ -90,7 +90,7 @@ const Product = () => {
         <div className='md:grid md:grid-cols-2 md:items-center md:my-16'>
           <div className='flex items-center justify-around my-8 md:my-0 '>
             <img src={IconMinus} alt='icon minus' />
-            <p className='text-3xl font-bold'>0</p>
+            <p className='text-3xl font-bold'>3</p>
             <img src={IconPlus} alt='icon plus' />
           </div>
           <ButtonAddtoCart className='my-16 md:my-0'>

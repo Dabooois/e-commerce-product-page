@@ -2,13 +2,20 @@ import tw from 'twin.macro';
 
 export const HeaderStyle = tw.header`
     relative
+    container
+    2xl:max-w-[140rem]
+    mx-auto
+    py-8
+    px-12
+    sm:px-0
+    lg:py-10
+    lg:px-4
     flex
     flex-row
     justify-between
     items-center
-    py-8
-    lg:py-10
     gap-8
+    lg:gap-16
 `;
 
 export const HeaderTitle = tw.h1`
@@ -34,4 +41,5 @@ export const HeaderContainer = tw.div`
     items-center
     justify-center
     gap-8
+    lg:gap-16
 `;
